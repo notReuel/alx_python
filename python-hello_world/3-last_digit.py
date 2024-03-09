@@ -20,7 +20,7 @@ lastDigit = (lastDigitList[-1])
 
 if number < 0:
     lastDigit = '-' + lastDigit
-    print(lastDigit)
+    # print(lastDigit)
 
 # convert the last item we saved from string back to an integer
 intLastDigit = int(lastDigit)

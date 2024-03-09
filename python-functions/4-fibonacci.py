@@ -11,4 +11,3 @@ def fibonacci_sequence(n):
 
     return list
 
-print(fibonacci_sequence(6))  

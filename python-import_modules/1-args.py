@@ -43,3 +43,4 @@ while count <= lengthOfArguments:
     print("{}: {}".format(count, listOfArguments[0][count]))
     count = count + 1
 
+if __name__ == "__main__":

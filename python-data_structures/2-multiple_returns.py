@@ -5,6 +5,8 @@ def multiple_returns(sentence):
             first = char
     return length, first
 
-sentence = "At Holberton school, I learnt C!"
-length, first = multiple_returns(sentence)
-print("Length: {:d} - First character: {}".format(length, first))
+if __name__ == "__main__":
+    sentence = "At Holberton school, I learnt C!"
+    length, first = multiple_returns(sentence)
+    print("Length: {:d} - First character: {}".format(length, first))
+    

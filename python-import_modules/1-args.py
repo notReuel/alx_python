@@ -38,9 +38,9 @@ entered'''
 # print argument if only 1 or arguments if more than 1
 if __name__ == "__main__":
     if lengthOfArguments < 2:
-        print("{} argument".format(lengthOfArguments))
+        print("{} argument:".format(lengthOfArguments))
     else:
-        print("{} arguments".format(lengthOfArguments))       
+        print("{} arguments:".format(lengthOfArguments))       
 
     # loop to print the arguments and corresponding number
     count = 1

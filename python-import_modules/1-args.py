@@ -40,7 +40,7 @@ if __name__ == "__main__":
     if lengthOfArguments < 2 and lengthOfArguments > 0:
         print("{} argument:".format(lengthOfArguments))
     if lengthOfArguments == 0:
-        print("{} argument.".format(lengthOfArguments))
+        print("{} arguments.".format(lengthOfArguments))
     if lengthOfArguments >= 2:
         print("{} arguments:".format(lengthOfArguments)) 
           

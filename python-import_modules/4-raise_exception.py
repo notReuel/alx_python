@@ -1,7 +1,5 @@
-def raise_exception():
-    sum = "a" + 1
-    return sum    
-    
+def raise_exception(a, b):
+    raise TypeError("Exception has been raised")    
     
 try:
     raise_exception()

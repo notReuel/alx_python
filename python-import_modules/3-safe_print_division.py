@@ -17,5 +17,6 @@ def safe_print_division(a, b):
 
 a = 12
 b = 6
-result = safe_print_division(a, b)
-print("{:d} / {:d} = {}".format(a, b, result))
+
+if __name__ == "__main__":
+    print("{:d} / {:d} = {}".format(a, b, safe_print_division(a, b)))

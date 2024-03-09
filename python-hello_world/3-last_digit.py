@@ -21,6 +21,7 @@ intLastDigit = int(lastDigit)
 print(intLastDigit)
 
 
+
 #an if statement to print the required output
 if intLastDigit > 5:
     print('the last digit of {} is {} and is greater than 5'.format(number, lastDigit, ))

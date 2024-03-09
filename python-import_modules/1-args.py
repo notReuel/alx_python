@@ -35,8 +35,12 @@ file/script is added to the list as an argument so we
 subtract one to match the actual number of arguments 
 entered'''
 
+# print argument if only 1 or arguments if more than 1
 if __name__ == "__main__":
-    print("{} arguments".format(lengthOfArguments))
+    if lengthOfArguments < 2:
+        print("{} argument".format(lengthOfArguments))
+    else:
+        print("{} arguments".format(lengthOfArguments))       
 
     # loop to print the arguments and corresponding number
     count = 1

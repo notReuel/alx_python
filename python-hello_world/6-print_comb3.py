@@ -9,4 +9,3 @@ for number in range (11, 89):
     if (int(str(number/10).split('.')[1])) > 0:
         print('{:02d}'.format(number), end=", ")
 print(89)
-

@@ -1,4 +1,8 @@
 class Square:
+    """
+    A class square that defines a square
+    with 'size'
+    """
 
     def __init__(self, size):
         '''initializing the size'''

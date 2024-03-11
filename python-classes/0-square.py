@@ -1,3 +1,4 @@
+'''A square module''''
 class Square:
     """
     A class square that defines a square

@@ -38,20 +38,18 @@ class Square:
         '''
         self.__size = size
 
+        """convert int to string for iteration"""
+        iterSize = str(size)
         if size <= 0:
-            print("size must be an integer")
+            print("size must be >= 0")            
             raise ValueError
         
-        elif any(char.isdigit() for char in size):
-            print("size must be >= 0")
+        if not any(char.isdigit() for char in iterSize):
+            print("size must be an integer")
             raise TypeError
             
+        else: 
+            print("(Size initialized to: {})".format(size))
     
-    # def tell(self):
-    #     '''Displaying the private size'''
-    #     print("Size: {}".format(self.__size))
-
-
-# sm = Square(44)
-# print(__import__("0-square").Square.__doc__)
-# sm.tell()
+mySquare = Square(3)
+# print(mySquare)

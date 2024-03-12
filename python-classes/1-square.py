@@ -36,20 +36,21 @@ class Square:
         and not a string/word
         
         '''
-        self.__size = size
 
         """convert int to string for iteration"""
         iterSize = str(size)
-        if size <= 0:
-            print("size must be >= 0")            
-            raise ValueError
+
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+
+        elif size <= 0:
+            raise ValueError("size must be >= 0")            
         
-        if not any(char.isdigit() for char in iterSize):
-            print("size must be an integer")
-            raise TypeError
-            
         else: 
-            print("(Size initialized to: {})".format(size))
+            self.__size = size
+            print("(Size initialized to: {})".format(self.__size))
     
-mySquare = Square(3)
+mySquare = Square(-1)
 # print(mySquare)
+# print(type(mysquare)) 
+# print(mysquare.dict_)

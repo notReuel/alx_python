@@ -52,5 +52,6 @@ class Square:
     
 mySquare = Square(-1)
 # print(mySquare)
+
 # print(type(mysquare)) 
 # print(mysquare.dict_)

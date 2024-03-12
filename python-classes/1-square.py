@@ -50,7 +50,7 @@ class Square:
             self.__size = size
             print("(Size initialized to: {})".format(self.__size))
     
-mySquare = Square(-1)
+#mySquare = Square(-1)
 # print(mySquare)
 
 # print(type(mysquare)) 

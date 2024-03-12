@@ -48,7 +48,7 @@ class Square:
         
         else: 
             self.__size = size
-            print("(Size initialized to: {})".format(self.__size))
+            #print("(Size initialized to: {})".format(self.__size))
     
 #mySquare = Square(-1)
 # print(mySquare)

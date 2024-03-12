@@ -6,7 +6,7 @@ two  (2) seperate arguments to represent the obj and the class
 to be checked
 """
 
-def is_same_class(objName, className):
+def is_kind_of_class(objName, className):
 
     """
     A function uses an isinstance within an if statement
@@ -20,6 +20,5 @@ def is_same_class(objName, className):
         return True
     else:
         return False
-    
     
     

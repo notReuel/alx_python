@@ -48,10 +48,16 @@ class Square:
         
         else: 
             self.__size = size
-            print("(Size initialized to: {})".format(self.__size))
+            #print("(Size initialized to: {})".format(self.__size))
+
+    def __repr__(self):
+        """
+        Return string representation of the object
+        """
+        return str(self.__dict__)
     
-mySquare = Square(-1)
+mySquare = Square()
 # print(mySquare)
 
-# print(type(mysquare)) 
-# print(mysquare.dict_)
+# print(type(mySquare)) 
+print(mySquare.dict_)

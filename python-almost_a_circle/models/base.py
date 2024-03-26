@@ -11,6 +11,9 @@ class Base:
         # self.id = id
 
         if id == None:
+            '''
+            a conditional statement
+            '''
             Base.__nb_objects = Base.__nb_objects + 1
             self.id = Base.__nb_objects
         else:

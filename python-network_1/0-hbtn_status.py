@@ -1,5 +1,6 @@
 '''
-A module to im
+A module to get a response from a url.
+url - Uniform Resource Locator
 '''
 import requests
 

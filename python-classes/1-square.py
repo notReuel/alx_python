@@ -25,6 +25,7 @@ class Square:
     2. the tell, which serves as the getter, as it displays the val
         value of the private attribute - __size
     """
+    __size = None
 
     def __init__(self, size=0):
         '''initializing size 
@@ -38,47 +39,54 @@ class Square:
         '''
 
         """convert int to string for iteration"""
-        iterSize = str(size)
-
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-
-        elif size == '':
-            self.__size = 0
-        
-        elif size <= 0:
-            raise ValueError("size must be >= 0")            
-        
+        if isinstance(size, int):
+            self.__size = size 
         else: 
+            raise TypeError('size must be an integer')
+        if size >= 0:
             self.__size = size
-            #print("(Size initialized to: {})".format(self.__size))
-<<<<<<< HEAD
+        else: 
+            raise ValueError('size must be >= 0')
 
-    def __repr__(self):
-        """
-        Return string representation of the object
-        """
-        return str(self.__dict__)
+
+#         iterSize = str(size)
+
+#         if not isinstance(size, int):
+#             raise TypeError("size must be an integer")
+
+#         elif size == '':
+#             self.__size = 0
+        
+#         elif size <= 0:
+#             raise ValueError("size must be >= 0")            
+        
+#         else: 
+#             self.__size = size
+#             #print("(Size initialized to: {})".format(self.__size))
+
+#     def __repr__(self):
+#         """
+#         Return string representation of the object
+#         """
+#         return str(self.__dict__)
     
-# mySquare = Square(1)
+# # mySquare = Square(1)
+# # # print(mySquare)
+
+# # print(type(mySquare)) 
+# # print(mySquare.__repr__)
+
+#     def __repr__(self):
+#         """
+#         Return string representation of the object
+#         """
+#         return str(self.__dict__)
+
+#     def __call__(self):
+#         return self.__dict__
+    
+# #mySquare = Square(-1)
 # # print(mySquare)
 
-# print(type(mySquare)) 
-# print(mySquare.__repr__)
-=======
-
-    def __repr__(self):
-        """
-        Return string representation of the object
-        """
-        return str(self.__dict__)
-
-    def __call__(self):
-        return self.__dict__
-    
-#mySquare = Square(-1)
-# print(mySquare)
-
-# print(type(mysquare)) 
-# print(mysquare.dict_)
->>>>>>> 86359440cbe35b07349986326a3a434c46867415
+# # print(type(mysquare)) 
+# # print(mysquare.dict_)

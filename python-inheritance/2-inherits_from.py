@@ -16,10 +16,8 @@ def inherits_from(objName, className):
     which represent the obj and the class to be checked
     """
     
-    if issubclass(objName, className):
-        return True
-    else:
-        return False
+    return issubclass(objName, className)
     
+
     
     

@@ -100,26 +100,3 @@ class Square:
             for j in range(self.__size):
                 print("#", end="")
             print()
-            
-        
-my_square = Square(3)
-my_square.my_print()
-
-print("--")
-
-my_square.size = 10
-my_square.my_print()
-
-print("--")
-
-my_square.size = 0
-my_square.my_print()
-
-print("--")
-# mySquare.size(12)
-# print("Area: {} for size: {}".format(mySquare.area(), mySquare.get_size))
-# mySquare.get_size()
-# print(mySquare)
-
-# print(type(mySquare)) 
-# print(mySquare.__repr__)

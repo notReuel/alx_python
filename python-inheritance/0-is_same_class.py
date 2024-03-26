@@ -16,10 +16,6 @@ def is_same_class(objName, className):
     which represent the obj and the class to be checked
     """
     
-    if isinstance(objName, className):
-        return True
-    else:
-        return False
+    return (type(objName) == className)
     
-    
-    
+

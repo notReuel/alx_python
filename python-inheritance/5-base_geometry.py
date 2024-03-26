@@ -11,14 +11,7 @@ class BaseGeometry:
     with a public instance method called area that
     raises an exception if the area is not called.
     """
-    pass
 
-    def __init__(self):
-        """
-        Empty Innit Constructor
-        """
-        # self.area = area
-        pass
 
     @property
     def area(self):

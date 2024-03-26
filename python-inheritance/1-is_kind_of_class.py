@@ -16,9 +16,13 @@ def is_kind_of_class(objName, className):
     which represent the obj and the class to be checked
     """
     
-    if isinstance(objName, className):
-        return True
-    else:
-        return False
+    return (type(objName) == className)
     
-    
+
+# a = 1
+# if is_kind_of_class(a, int):
+#     print("{} comes from {}".format(a, int.__name__))
+# if is_kind_of_class(a, float):
+#     print("{} comes from {}".format(a, float.__name__))
+# if is_kind_of_class(a, object):
+#     print("{} comes from {}".format(a, object.__name__))

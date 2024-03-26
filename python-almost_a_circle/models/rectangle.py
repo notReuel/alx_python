@@ -1,22 +1,19 @@
-"""
-Rectangle class
+""""
+Rectangle classs
 """
 from models.base import Base
-
 class Rectangle(Base):
-
+    ''''
+    This class models a rectangle
     '''
-    A class that will model a rectangle
-    '''
-
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-
-        @property
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        
+    @property
     def width(self):
         '''public method: Returns the width of the Rectangle '''
         return self.__width
@@ -29,9 +26,9 @@ class Rectangle(Base):
             raise ValueError('width must be > 0')
         else:
             self.__width = width
-            
+    
     @property
-     def height(self):
+    def height(self):
         '''public method: Returns the height of the Rectangle'''
         return self.__height
     
@@ -112,4 +109,3 @@ class Rectangle(Base):
                     self.x = v
                 if k == 'y':
                     self.y = v
-    

@@ -1,3 +1,20 @@
+"""A square module
+
+This script calculates the area of
+the square of a square
+And hides the size by making it
+a private variable
+
+Contains the function/method:
+    tell - which prints out information 
+    about the square
+
+    can be called using:
+    objectName = Square('ObjectArgument - value')
+    objectName.tell() 
+
+"""
+
 class Square:
 
     """
@@ -9,7 +26,6 @@ class Square:
     2. the tell, which serves as the getter, as it displays the val
         value of the private attribute - __size
     """
-    __size = None
 
     def __init__(self, size=0):
         '''initializing size 
@@ -23,15 +39,35 @@ class Square:
         '''
 
         """convert int to string for iteration"""
-        if isinstance(size, int):
-            self.__size = size 
-        else: 
-            raise TypeError('size must be an integer')
-        if size >= 0:
-            self.__size = size
-        else: 
-            raise ValueError('size must be >= 0')
+        iterSize = str(size)
 
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+
+        elif size == '':
+            self.__size = 0
+        
+        elif size <= 0:
+            raise ValueError("size must be >= 0")            
+        
+        else: 
+            self.__size = size
+            #print("(Size initialized to: {})".format(self.__size))
+
+    def __repr__(self):
+        """
+        Return string representation of the object
+        """
+        return str(self.__dict__)
+    
     def area(self):
-        """Public instance method: Returns the area of the square"""
-        return (self.__size**2)
+        areaOfSquare = self.__size**2
+        print(areaOfSquare)
+
+    
+# mySquare = Square(4)
+# mySquare.area()
+# # print(mySquare)
+
+# print(type(mySquare)) 
+# print(mySquare.__repr__)

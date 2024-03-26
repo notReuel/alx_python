@@ -1,6 +1,7 @@
 """A square module
 
-This script defines a square
+This script calculates the area of
+the square of a square
 And hides the size by making it
 a private variable
 
@@ -11,9 +12,11 @@ Contains the function/method:
     can be called using:
     objectName = Square('ObjectArgument - value')
     objectName.tell() 
+
 """
 
 class Square:
+
     """
     A class square that defines a square
     with 'size'
@@ -34,36 +37,56 @@ class Square:
         and not a string/word
         
         '''
+
         """convert int to string for iteration"""
+
         if not isinstance(size, int):
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
+            raise TypeError("size must be an integer")
+        
+        elif size <= 0:
+            raise ValueError("size must be >= 0")            
+        
         else: 
             self.__size = size
-    
+            #print("(Size initialized to: {})".format(self.__size))
+
     @property
     def size(self):
-        '''public method: returns the size of the square'''
         return self.__size
     
-    @size.setter
-    def size(self, value):
-        if not isinstance(value, int):
-            raise TypeError('size must be an integer')
-        elif value < 0: 
-            raise ValueError('size must be >= 0')
-        else: 
-            self.__size = value
-
     def area(self):
         return (self.__size**2)
+        # print("Area: {}".format(areaOfSquare))   
+    
+    # @size.setter
+    # def size(self, size):
+    #     # if value >= 0 and isinstance(value, int):
+    #     self.__size = size
+    #     # value = self.__size
+    #     # return value
 
-    def my_print(self): 
-        """public instance method to print the square"""
-        if self.__size = 0:
+    # @size.getter
+    # def size(self):
+    #     sizeofSquare = self.__size
+    #     return sizeofSquare
+    
+        """
+        Getter to retrieve the size of the private variable
+        """
+            
+        # if not isinstance(value, int):
+        #     raise TypeError("size must be an integer")
+        
+        # elif value <= 0:
+        #     raise ValueError("size must be >= 0")            
+        
+        # else: 
+        #     self.__size = value
+
+    def my_print(self):
+        if self.__size == 0:
             print()
         for i in range(self.__size):
             for j in range(self.__size):
-                print('#', end='')
+                print("#", end="")
             print()

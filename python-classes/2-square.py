@@ -49,14 +49,15 @@ class Square:
             raise ValueError('size must be >= 0')
 
 
-    def __repr__(self):
-        """
-        Return string representation of the object
-        """
-        return str(self.__dict__)
+    # def __repr__(self):
+    #     """
+    #     Return string representation of the object
+    #     """
+    #     return str(self.__dict__)
     
     def area(self):
-        areaOfSquare = self.__size**2
-        print(areaOfSquare)
+        # areaOfSquare = self.__size**2
+        # print(areaOfSquare)
+        return (self.__size**2)
 
 

@@ -1,7 +1,6 @@
 """A square module
 
-This script calculates the area of
-the square of a square
+This script defines a square
 And hides the size by making it
 a private variable
 
@@ -26,6 +25,7 @@ class Square:
     2. the tell, which serves as the getter, as it displays the val
         value of the private attribute - __size
     """
+    __size = None
 
     def __init__(self, size=0):
         '''initializing size 
@@ -39,20 +39,15 @@ class Square:
         '''
 
         """convert int to string for iteration"""
-        iterSize = str(size)
-
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-
-        elif size == '':
-            self.__size = 0
-        
-        elif size <= 0:
-            raise ValueError("size must be >= 0")            
-        
+        if isinstance(size, int):
+            self.__size = size 
         else: 
+            raise TypeError('size must be an integer')
+        if size >= 0:
             self.__size = size
-            #print("(Size initialized to: {})".format(self.__size))
+        else: 
+            raise ValueError('size must be >= 0')
+
 
     def __repr__(self):
         """
@@ -64,10 +59,4 @@ class Square:
         areaOfSquare = self.__size**2
         print(areaOfSquare)
 
-    
-# mySquare = Square(4)
-# mySquare.area()
-# # print(mySquare)
 
-# print(type(mySquare)) 
-# print(mySquare.__repr__)

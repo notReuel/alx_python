@@ -10,7 +10,7 @@ if len(sys.argv) > 1:
     try:
         res = requests.get(URL, auth=(username,pwd))
         res_json = res.json()
-        print(res_json)
+        print(res_json['id'])
     except Exception as e:
         print('None')
     

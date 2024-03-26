@@ -94,9 +94,32 @@ class Square:
         #     self.__size = value
 
     def my_print(self):
+        if self.__size == 0:
+            print()
         for i in range(self.__size):
             for j in range(self.__size):
                 print("#", end="")
             print()
             
         
+my_square = Square(3)
+my_square.my_print()
+
+print("--")
+
+my_square.size = 10
+my_square.my_print()
+
+print("--")
+
+my_square.size = 0
+my_square.my_print()
+
+print("--")
+# mySquare.size(12)
+# print("Area: {} for size: {}".format(mySquare.area(), mySquare.get_size))
+# mySquare.get_size()
+# print(mySquare)
+
+# print(type(mySquare)) 
+# print(mySquare.__repr__)

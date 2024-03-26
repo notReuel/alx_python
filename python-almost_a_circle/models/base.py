@@ -1,8 +1,13 @@
 class Base:
-
+    '''
+    A private class with a variable nb_objects initialized to 0
+    '''
     __nb_objects = 0
 
     def __init__(self, id=None):
+        '''
+        defining the process of the function
+        '''
         # self.id = id
 
         if id == None:

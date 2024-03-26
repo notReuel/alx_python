@@ -14,8 +14,7 @@ def inherits_from(objName, className):
 
     It passes the arrguments of for the parameters (objName, className), 
     which represent the obj and the class to be checked
-    """
-    
+    """    
     return issubclass(type(objName), className) and not (type(objName)==className)
     
 

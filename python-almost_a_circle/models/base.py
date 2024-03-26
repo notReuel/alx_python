@@ -1,7 +1,12 @@
+"""
+Base class
+"""
+
 class Base:
     '''
     This class will be the 'base' of all other classes
     '''
+
     __nb_objects = 0
     def __init__(self, id=None):
         '''
@@ -10,7 +15,7 @@ class Base:
 
         if id:
             '''
-            a conditional statement
+            manage id attribute in all your future classes
             '''            
             self.id = id
         else:
@@ -18,19 +23,3 @@ class Base:
             self.id = Base.__nb_objects
 
 
-if __name__ == "__main__":
-
-    b1 = Base()
-    print(b1.id)
-
-    b2 = Base()
-    print(b2.id)
-
-    b3 = Base()
-    print(b3.id)
-
-    b4 = Base(12)
-    print(b4.id)
-
-    b5 = Base()
-    print(b5.id)

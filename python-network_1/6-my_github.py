@@ -16,12 +16,3 @@ def get_github_user(username, token):
         return None
         
 
-
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        username = sys.argv[1]
-        token = sys.argv[2]
-        get_github_user(username, token) 
-
-
-

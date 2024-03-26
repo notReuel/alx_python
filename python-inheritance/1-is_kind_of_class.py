@@ -16,7 +16,7 @@ def is_kind_of_class(objName, className):
     which represent the obj and the class to be checked
     """
     
-    return (type(objName) == className)
+    return isinstance(objName, className)
     
 
 # a = 1

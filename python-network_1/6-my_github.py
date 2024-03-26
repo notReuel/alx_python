@@ -1,7 +1,7 @@
 import requests
 import sys
 
-URL = 'https://api.github.com/user/${username}'
+URL = 'https://api.github.com/user/'
 
 if len(sys.argv) > 1:
     username = sys.argv[1]

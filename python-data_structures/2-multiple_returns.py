@@ -1,11 +1,8 @@
 def multiple_returns(sentence):
     length = len(sentence)
-    for char in sentence:
-        if char == sentence[0]:
-            first = char
+    if length == 0:
+        first = None
+    else: 
+        first = sentence[0]
     return length, first
 
-if __name__ == "__main__":
-    sentence = ""
-    length, first = multiple_returns(sentence)
-    print("Length: {:d} - First character: {}".format(length, first))

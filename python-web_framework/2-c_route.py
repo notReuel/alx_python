@@ -16,7 +16,7 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def CisFun(text):
-    formatted_text = text('_', ' ')
+    formatted_text = text.replace('_', ' ')
     return 'C {}'.format(formatted_text)
 
 

@@ -8,7 +8,7 @@ mysql_database = argv[3]
 dbconnect = MySQLdb.connect(host = 'localhost', port=3306, user=mysql_username, passwd=mysql_password, db=mysql_database)
 cursor = dbconnect.cursor()
 
-cursor.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON states.id = cities.states_id")
+cursor.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON states.id = cities.state_id")
 cities = cursor.fetchall()
 
 for city in cities:

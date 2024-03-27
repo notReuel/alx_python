@@ -13,9 +13,8 @@ database = create_engine(path)
 Session = sessionmaker(bind=database)
 session = Session()
 
-states = session.query(state).all()
+states = session.query(State).all()
 
 for state in states:
     print("{}: {}".format(state.id, state.name))
 
-    

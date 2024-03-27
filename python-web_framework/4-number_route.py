@@ -31,7 +31,7 @@ def pythonIsFun(text='is cool'):
 """create route at /number/<n> display --> “n is a number” if n is a number"""
 @app.route('/number/<int:n>',strict_slashes=False)
 def number(n):
-    return f"{escape(n)} is a number"
+    return "{} is a number".format(n)
 
 if __name__ == '__main__':
     # port and host to run flask app

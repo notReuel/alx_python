@@ -16,7 +16,7 @@ session = Session()
 states = session.query(State).first()
 
 if states:
-    print("{}: {}".format(state.id, state.name))
+    print("{}: {}".format(states.id, states.name))
 else: 
     print("Nothing")
 

@@ -13,7 +13,7 @@ database = create_engine(path)
 Session = sessionmaker(bind=database)
 session = Session()
 
-states = session.query(State).filter(State.name.like(%a%))
+states = session.query(State).filter(State.name.like('%a%'))
 
 if states: 
     for state in states:

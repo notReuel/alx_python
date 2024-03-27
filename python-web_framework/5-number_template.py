@@ -46,6 +46,9 @@ create route at /number/<n> display --> “n is a number” if n is a number
 """
 @app.route('/number_template/<int:n>',strict_slashes=False)
 def number(n):
+    """
+    opens the html page
+    """
     return render_template('5-number.html', num=n)
 
 

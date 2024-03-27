@@ -19,12 +19,16 @@ def CisFun(text):
     formatted_text = text.replace('_', ' ')
     return 'C {}'.format(formatted_text)
 
+"""
+for Python is cool
+"""
 @app.route('/python/<text>', strict_slashes=False)
 @app.route('/python', strict_slashes=False)
 def pythonIsFun(text='is cool'):
     formatted_text = text.replace('_', ' ')
     return 'Python {}'.format(formatted_text)
 
+"""For integers"""
 @app.route('/number/<int:n>', strict_slashes=False)
 def num(n):
     return "{} is a number".format(n)                                                                           "

@@ -10,7 +10,7 @@ dbconnect = MySQLdb.connect(host='localhost', port=3306, user=mysql_username, pa
 
 cursor = dbconnect.cursor()
 
-cursor.execute('SELECT * FROM states WHERE BINARY name LIKE %s '.format(stateName + '%'))
+cursor.execute("SELECT * FROM states WHERE BINARY name =  '{}' ".format(stateName))
 states = cursor.fetchall()
 
 for state in states:

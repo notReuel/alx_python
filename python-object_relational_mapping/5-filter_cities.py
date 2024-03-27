@@ -7,7 +7,7 @@ mysql_database = argv[3]
 state_Name = argv[4]
 
 dbconnect = MySQLdb.connect(host='localhost', port=3306, user=mysql_username, passwd=mysql_password, db=mysql_database)
-cursor = dbconnect.fetchall()
+cursor = dbconnect.cursor()
 
 cursor.execute("SELECT name FROM cities WHERE state_id = (SELECT id FROM states WHERE BINARY name = %s) ",[state_Name])
 cities = cursor.fetchall()

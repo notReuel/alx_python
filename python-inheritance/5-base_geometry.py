@@ -1,42 +1,20 @@
-"""
-A module with a blank class called geometry
-
-to be tested by the alx intranet checker
-"""
-
-class BaseGeometry:
-    """
-    Base class for geometry shapes.
-    """
-
-    def __init__(self):
-        """
-        Initializes a BaseGeometry object.
-        """
-        pass
-
+"""def BaseGeometry class"""
+class MetaClass(type):
+    def __dir__(cls):
+        ''''
+        ovrides dir() method to execlude __init_subclasses__
+        '''
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+class BaseGeometry(metaclass=MetaClass):
+    '''Base class for Geometry'''
+    def __dir__ (cls):
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
     def area(self):
-        """
-        Computes the area of the geometry shape.
-
-        Raises:
-            Exception: This method is not implemented in the base class.
-        """
-        raise Exception("area() is not implemented")
-
+        """Public instance method: def area(self): that raises an Exception with the message area() is not implemented"""
+        raise Exception('area() is not implemented')
     def integer_validator(self, name, value):
-        """
-        Validates an integer value.
-
-        Args:
-            name (str): The name of the value being validated.
-            value (int): The value to be validated.
-
-        Raises:
-            TypeError: If the value is not an integer.
-            ValueError: If the value is less than or equal to 0.
-        """
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+        '''Public instance method: that validates value:'''
+        if not (type(value) == int):
+            raise TypeError('{} must be an integer'.format(name))
+        elif value <= 0:
+            raise ValueError('{} must be greater than 0'.format(name))

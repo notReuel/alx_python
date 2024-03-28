@@ -1,3 +1,9 @@
+"""
+A module with a blank class called geometry
+
+to be tested by the alx intranet checker
+"""
+
 class BaseGeometry:
     """
     Base class for geometry shapes.

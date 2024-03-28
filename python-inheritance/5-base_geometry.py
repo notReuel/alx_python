@@ -9,6 +9,12 @@ class BaseGeometry:
     Base class for geometry shapes.
     """
 
+    def __init__(self):
+        """
+        Initializes a BaseGeometry object.
+        """
+        pass
+
     def area(self):
         """
         Computes the area of the geometry shape.
